@@ -1,5 +1,5 @@
-﻿using System.Net;
-using UrlShortener.Application.Wrappers.ServiceResponses;
+﻿using EventRegistration.Application.Wrappers.ServiceResponses;
+using System.Net;
 
 namespace KamaCake.Application.Wrappers.ServiceResponses.ErrorResponses
 {

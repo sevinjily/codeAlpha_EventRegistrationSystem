@@ -1,0 +1,17 @@
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\bin\Debug\net8.0\EventRegistration.Persistence.deps.json
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\bin\Debug\net8.0\EventRegistration.Persistence.runtimeconfig.json
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\bin\Debug\net8.0\EventRegistration.Persistence.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\bin\Debug\net8.0\EventRegistration.Persistence.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\bin\Debug\net8.0\EventRegistration.Domain.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\bin\Debug\net8.0\EventRegistration.Domain.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\EventRegistration.Persistence.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\EventRegistration.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\EventRegistration.Persistence.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\EventRegistration.Persistence.AssemblyInfo.cs
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\EventRegistration.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\EventReg.9225AC0D.Up2Date
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\EventRegistration.Persistence.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\refint\EventRegistration.Persistence.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\EventRegistration.Persistence.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\EventRegistration.Persistence.genruntimeconfig.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Infrastructure\EventRegistration.Persistence\obj\Debug\net8.0\ref\EventRegistration.Persistence.dll

@@ -1,0 +1,15 @@
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\EventRegistration.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\EventRegistration.Application.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\EventRegistration.Application.AssemblyInfo.cs
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\EventRegistration.Application.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\bin\Debug\net8.0\EventRegistration.Application.deps.json
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\bin\Debug\net8.0\EventRegistration.Application.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\bin\Debug\net8.0\EventRegistration.Application.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\EventRegistration.Application.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\refint\EventRegistration.Application.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\EventRegistration.Application.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\ref\EventRegistration.Application.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\bin\Debug\net8.0\EventRegistration.Domain.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\bin\Debug\net8.0\EventRegistration.Domain.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\EventRegistration.Application.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Application\obj\Debug\net8.0\EventReg.AAE10956.Up2Date

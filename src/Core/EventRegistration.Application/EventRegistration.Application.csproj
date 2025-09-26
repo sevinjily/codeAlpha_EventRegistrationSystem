@@ -11,4 +11,12 @@
     <Folder Include="Features\Query\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventRegistration.Domain\EventRegistration.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

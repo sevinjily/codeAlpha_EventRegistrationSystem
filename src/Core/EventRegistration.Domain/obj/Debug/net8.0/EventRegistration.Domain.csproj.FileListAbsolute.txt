@@ -1,0 +1,12 @@
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\bin\Debug\net8.0\EventRegistration.Domain.deps.json
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\bin\Debug\net8.0\EventRegistration.Domain.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\bin\Debug\net8.0\EventRegistration.Domain.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\obj\Debug\net8.0\EventRegistration.Domain.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\obj\Debug\net8.0\EventRegistration.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\obj\Debug\net8.0\EventRegistration.Domain.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\obj\Debug\net8.0\EventRegistration.Domain.AssemblyInfo.cs
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\obj\Debug\net8.0\EventRegistration.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\obj\Debug\net8.0\EventRegistration.Domain.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\obj\Debug\net8.0\refint\EventRegistration.Domain.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\obj\Debug\net8.0\EventRegistration.Domain.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Domain\obj\Debug\net8.0\ref\EventRegistration.Domain.dll

@@ -1,4 +1,6 @@
-﻿using EventRegistration.Persistence.Context;
+﻿using EventRegistration.Application.Interfaces.Repositories;
+using EventRegistration.Persistence.Context;
+using EventRegistration.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +13,8 @@ namespace EventRegistration.Persistence
         {
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));//repolar generic oldugu ucun typeof istifade edirik
         }  
     }
 }
