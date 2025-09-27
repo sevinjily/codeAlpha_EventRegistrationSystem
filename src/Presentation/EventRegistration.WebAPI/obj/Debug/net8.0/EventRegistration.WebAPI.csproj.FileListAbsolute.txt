@@ -154,3 +154,5 @@ C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentat
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\obj\Debug\net8.0\EventRegistration.WebAPI.pdb
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\obj\Debug\net8.0\EventRegistration.WebAPI.genruntimeconfig.cache
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\obj\Debug\net8.0\ref\EventRegistration.WebAPI.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\bin\Debug\net8.0\EventRegistration.Application.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\bin\Debug\net8.0\EventRegistration.Application.pdb

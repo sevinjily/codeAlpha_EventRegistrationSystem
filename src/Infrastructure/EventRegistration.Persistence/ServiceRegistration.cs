@@ -15,6 +15,8 @@ namespace EventRegistration.Persistence
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));//repolar generic oldugu ucun typeof istifade edirik
-        }  
+            services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+
+        }
     }
 }
