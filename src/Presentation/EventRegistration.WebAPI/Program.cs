@@ -1,4 +1,5 @@
 using EventRegistration.Persistence;
+using EventRegistration.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddPersistenceRegistration(builder.Configuration);//persistence layerinin serviceRegistrationu
+builder.Services.AddApplicationRegistration();
 
 var app = builder.Build();
 

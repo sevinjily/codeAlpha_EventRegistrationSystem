@@ -4,6 +4,19 @@
     "title": "EventRegistration.WebAPI",
     "version": "1.0"
   },
-  "paths": { },
+  "paths": {
+    "/api/Event/GetAllEvents": {
+      "get": {
+        "tags": [
+          "Event"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
   "components": { }
 }
