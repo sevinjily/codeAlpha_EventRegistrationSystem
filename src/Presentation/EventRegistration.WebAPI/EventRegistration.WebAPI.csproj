@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\EventRegistration.Mapper\EventRegistration.Mapper.csproj" />
     <ProjectReference Include="..\..\Infrastructure\EventRegistration.Persistence\EventRegistration.Persistence.csproj" />
   </ItemGroup>
 

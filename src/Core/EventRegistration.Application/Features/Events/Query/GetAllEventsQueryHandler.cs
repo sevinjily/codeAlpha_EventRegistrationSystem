@@ -1,10 +1,11 @@
 ﻿using EventRegistration.Application.Interfaces.UnitOfWorks;
+using EventRegistration.Application.Wrappers.ServiceResponses;
 using EventRegistration.Domain.Entities;
 using MediatR;
 
 namespace EventRegistration.Application.Features.Events.Query
 {
-    public class GetAllEventsQueryHandler : IRequestHandler<GetAllEventsQueryRequest, IList<GetAllEventsQueryResponse>>
+    public class GetAllEventsQueryHandler : IRequestHandler<GetAllEventsQueryRequest, ServiceResponseWithData<IList<GetAllEventsQueryResponse>>>
     {
         private readonly IUnitOfWork unitOfWork;
 
@@ -12,7 +13,7 @@ namespace EventRegistration.Application.Features.Events.Query
         {
             this.unitOfWork = unitOfWork;
         }
-        public async Task<IList<GetAllEventsQueryResponse>> Handle(GetAllEventsQueryRequest request, CancellationToken cancellationToken)
+        public async Task<ServiceResponseWithData<IList<GetAllEventsQueryResponse>>> Handle(GetAllEventsQueryRequest request, CancellationToken cancellationToken)
         {
             var events = await unitOfWork.GetReadRepository<Event>().GetAllAsync();
             List <GetAllEventsQueryResponse> response= new();
@@ -30,7 +31,12 @@ namespace EventRegistration.Application.Features.Events.Query
                     EndDate = eventt.EndDate
                 });
             }
-                return response;
+            return new ServiceResponseWithData<IList<GetAllEventsQueryResponse>>
+            (
+               value: response,
+               isSuccess: true,
+               statusCode: System.Net.HttpStatusCode.OK
+             );
             
             
             
