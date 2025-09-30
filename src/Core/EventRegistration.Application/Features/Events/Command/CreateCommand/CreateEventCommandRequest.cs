@@ -1,10 +1,11 @@
-﻿using MediatR;
+﻿using EventRegistration.Application.Wrappers.ServiceResponses;
+using MediatR;
 
 namespace EventRegistration.Application.Features.Events.Command.CreateCommand
 {
-    public class CreateEventCommandRequest:IRequest
+    public class CreateEventCommandRequest:IRequest<ServiceResponse>
     {
-        public string EventName { get; set; } 
+        public string EventName { get; set; }
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

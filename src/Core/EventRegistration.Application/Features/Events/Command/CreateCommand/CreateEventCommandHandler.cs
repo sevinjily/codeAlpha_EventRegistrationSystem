@@ -1,19 +1,26 @@
 ﻿using EventRegistration.Application.Interfaces.AutoMapper;
+using EventRegistration.Application.Interfaces.UnitOfWorks;
+using EventRegistration.Application.Wrappers.ServiceResponses;
+using EventRegistration.Domain.Entities;
 using MediatR;
 
 namespace EventRegistration.Application.Features.Events.Command.CreateCommand
 {
-    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommandRequest>
+    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommandRequest,ServiceResponse>
     {
-        private readonly IMapper mapper;
+        private readonly IUnitOfWork unitOfWork;
 
-        public CreateEventCommandHandler(IMapper mapper)
+        public CreateEventCommandHandler(IUnitOfWork unitOfWork)
         {
-            this.mapper = mapper;
+            this.unitOfWork = unitOfWork;
         }
-        public Task Handle(CreateEventCommandRequest request, CancellationToken cancellationToken)
+
+        public async Task<ServiceResponse> Handle(CreateEventCommandRequest request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            Event eventt = new(request.EventName, request.Description, request.StartDate, request.EndDate, request.Location, request.UserLimit);
+            await unitOfWork.GetWriteRepository<Event>().AddAsync(eventt);
+            await unitOfWork.SaveAsync();
+            return new ServiceResponse(true,System.Net.HttpStatusCode.Created,"Ugurla yaradildi!");
         }
     }
 }

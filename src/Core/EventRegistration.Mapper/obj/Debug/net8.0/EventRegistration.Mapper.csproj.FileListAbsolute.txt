@@ -1,0 +1,17 @@
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\bin\Debug\net8.0\EventRegistration.Mapper.deps.json
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\bin\Debug\net8.0\EventRegistration.Mapper.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\bin\Debug\net8.0\EventRegistration.Mapper.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\bin\Debug\net8.0\EventRegistration.Application.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\bin\Debug\net8.0\EventRegistration.Domain.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\bin\Debug\net8.0\EventRegistration.Application.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\bin\Debug\net8.0\EventRegistration.Domain.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\EventRegistration.Mapper.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\EventRegistration.Mapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\EventRegistration.Mapper.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\EventRegistration.Mapper.AssemblyInfo.cs
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\EventRegistration.Mapper.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\EventReg.B6CF2625.Up2Date
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\EventRegistration.Mapper.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\refint\EventRegistration.Mapper.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\EventRegistration.Mapper.pdb
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Core\EventRegistration.Mapper\obj\Debug\net8.0\ref\EventRegistration.Mapper.dll

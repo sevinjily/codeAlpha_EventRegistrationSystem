@@ -158,3 +158,6 @@ C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentat
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\bin\Debug\net8.0\EventRegistration.Application.pdb
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\bin\Debug\net8.0\MediatR.dll
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\bin\Debug\net8.0\EventRegistration.Mapper.dll
+C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\EventRegistrationSystem\src\Presentation\EventRegistration.WebAPI\bin\Debug\net8.0\EventRegistration.Mapper.pdb

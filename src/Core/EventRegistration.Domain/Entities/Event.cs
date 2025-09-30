@@ -4,6 +4,19 @@ namespace EventRegistration.Domain.Entities
 {
     public class Event:EntityBase
     {
+        public Event()
+        {
+            
+        }
+        public Event(string EventName, string Description, DateTime StartDate, DateTime EndDate, string Location, int UserLimit)
+        {
+            this.EventName = EventName;
+            this.Description = Description;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.Location = Location;
+            this.UserLimit = UserLimit;
+        }
         public string EventName { get; set; }       // Event adı
         public string Description { get; set; }     // Tədbirin təsviri
         public DateTime StartDate { get; set; }     // Başlanğıc tarixi
