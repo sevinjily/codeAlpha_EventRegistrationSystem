@@ -5,15 +5,15 @@ using MediatR;
 
 namespace EventRegistration.Application.Features.Events.Command.DeleteCommand
 {
-    public class DeleteCommandRequestHandler : IRequestHandler<DeleteCommandRequest, ServiceResponse>
+    public class DeleteEventCommandHandler : IRequestHandler<DeleteEventCommandRequest, Unit>
     {
         private readonly IUnitOfWork unitOfWork;
 
-        public DeleteCommandRequestHandler(IUnitOfWork unitOfWork)
+        public DeleteEventCommandHandler(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
         }
-        public async Task<ServiceResponse> Handle(DeleteCommandRequest request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteEventCommandRequest request, CancellationToken cancellationToken)
         {
             var eventt = await unitOfWork.GetReadRepository<Event>().GetAsync(x => x.Id == request.Id && !x.IsDeleted);
 
@@ -21,7 +21,8 @@ namespace EventRegistration.Application.Features.Events.Command.DeleteCommand
             await unitOfWork.GetWriteRepository<Event>().UpdateAsync(eventt);
             await unitOfWork.SaveAsync();
 
-            return new ServiceResponse(true, System.Net.HttpStatusCode.OK,"Deleted successfully!");
+            //return new ServiceResponse(true, System.Net.HttpStatusCode.OK,"Deleted successfully!");
+            return Unit.Value;
         }
     }
 }

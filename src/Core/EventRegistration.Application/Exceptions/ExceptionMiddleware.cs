@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Http;
 using SendGrid.Helpers.Errors.Model;
-using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
 namespace EventRegistration.Application.Exceptions
@@ -15,7 +16,7 @@ namespace EventRegistration.Application.Exceptions
             }
             catch (Exception ex) 
             { 
-                await
+                await HandleExceptionAsync(httpContext, ex);
             }
         }
 
@@ -24,6 +25,26 @@ namespace EventRegistration.Application.Exceptions
             int statusCode = GetStatusCode(exception); 
             httpContext.Response.ContentType = "application/json";
             httpContext.Response.StatusCode = statusCode;
+
+            if(exception.GetType()== typeof(ValidationException))
+            {
+                return httpContext.Response.WriteAsync(new ExceptionModel
+                {
+                    Errors=((ValidationException)exception).Errors.Select(x=>x.ErrorMessage),
+                    StatusCode= StatusCodes.Status400BadRequest
+                }.ToString());
+            }
+
+            List<string> errors = new()
+            {
+                $"Xeta mesaji: {exception.Message}",
+               $"Xeta aciqlamasi: {exception.InnerException?.ToString()}" 
+            };
+            return httpContext.Response.WriteAsync(new ExceptionModel
+            {
+                Errors=errors,
+                StatusCode=statusCode
+            }.ToString());
         }
 
         private static int GetStatusCode(Exception exception) =>

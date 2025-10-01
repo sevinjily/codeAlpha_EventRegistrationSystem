@@ -3,7 +3,7 @@ using MediatR;
 
 namespace EventRegistration.Application.Features.Events.Command.UpdateCommand
 {
-    public class UpdateEventCommandRequest:IRequest<ServiceResponse>
+    public class UpdateEventCommandRequest:IRequest<Unit>
     {
         public Guid Id { get; set; }
         public string EventName { get; set; }

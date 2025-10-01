@@ -31,12 +31,13 @@ namespace EventRegistration.Application.Features.Events.Query
                     EndDate = eventt.EndDate
                 });
             }
-            return new ServiceResponseWithData<IList<GetAllEventsQueryResponse>>
-            (
-               value: response,
-               isSuccess: true,
-               statusCode: System.Net.HttpStatusCode.OK
-             );
+            throw new Exception("Xeta mesaji");
+            //return new ServiceResponseWithData<IList<GetAllEventsQueryResponse>>
+            //(
+            //   value: response,
+            //   isSuccess: true,
+            //   statusCode: System.Net.HttpStatusCode.OK
+            // );
             
             
             

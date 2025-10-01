@@ -3,7 +3,7 @@ using MediatR;
 
 namespace EventRegistration.Application.Features.Events.Command.CreateCommand
 {
-    public class CreateEventCommandRequest:IRequest<ServiceResponse>
+    public class CreateEventCommandRequest:IRequest<Unit>
     {
         public string EventName { get; set; }
         public string Description { get; set; }

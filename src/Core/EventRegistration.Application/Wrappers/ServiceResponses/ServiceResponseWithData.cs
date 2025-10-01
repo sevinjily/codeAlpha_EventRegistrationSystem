@@ -6,13 +6,13 @@ namespace EventRegistration.Application.Wrappers.ServiceResponses
     {
         public T Value { get; private set; }
         //Mesajsiz
-        public ServiceResponseWithData(T value, bool isSuccess, HttpStatusCode statusCode) : base(isSuccess, statusCode)
+        public ServiceResponseWithData(T value, bool isSuccess=true, HttpStatusCode statusCode = HttpStatusCode.OK) : base(isSuccess, statusCode)
         {
             Value = value;
         }
 
         //mesajli
-        public ServiceResponseWithData(T value, bool isSuccess, HttpStatusCode statusCode, string message) : base(isSuccess, statusCode, message)
+        public ServiceResponseWithData(T value, bool isSuccess=true, HttpStatusCode statusCode = HttpStatusCode.OK, string message = "ugurlu") : base(isSuccess, statusCode, message)
         {
             Value = value;
         }

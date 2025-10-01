@@ -1,6 +1,7 @@
 using EventRegistration.Persistence;
 using EventRegistration.Application;
 using EventRegistration.Mapper;
+using EventRegistration.Application.Exceptions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.ConfigureExceptionHandlingMiddleware();//custom exception middleware
 
 app.UseHttpsRedirection();
 

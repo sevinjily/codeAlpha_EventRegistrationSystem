@@ -1,10 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using EventRegistration.Application.Exceptions;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using FluentValidation;
+using MediatR;
+using EventRegistration.Application.Behaviors;
 
 namespace EventRegistration.Application
 {
@@ -14,6 +13,13 @@ namespace EventRegistration.Application
         {
             var assembly=Assembly.GetExecutingAssembly();
             services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(assembly));
+
+            services.AddTransient<ExceptionMiddleware>();
+
+            services.AddValidatorsFromAssembly(assembly);
+            ValidatorOptions.Global.LanguageManager.Culture = new System.Globalization.CultureInfo("az");
+
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(FluentValidationBehavior<,>));
         }
     }
 }

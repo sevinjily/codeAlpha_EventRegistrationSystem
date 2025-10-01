@@ -9,13 +9,14 @@ namespace EventRegistration.Application.Wrappers.ServiceResponses
         public HttpStatusCode StatusCode { get; private set; }
 
         //MESAJSIZ
-        public ServiceResponse(bool IsSuccess, HttpStatusCode statusCode)
+        public ServiceResponse(bool IsSuccess=true, HttpStatusCode statusCode=HttpStatusCode.OK)
         {
             isSuccess = IsSuccess;
             StatusCode = statusCode;
         }
+      
         //MESAJLI
-        public ServiceResponse(bool IsSuccess, HttpStatusCode statusCode, string message) : this(IsSuccess, statusCode)
+        public ServiceResponse(bool IsSuccess=true, HttpStatusCode statusCode = HttpStatusCode.OK, string message="ugurlu") : this(IsSuccess, statusCode)
         {
             {
 
