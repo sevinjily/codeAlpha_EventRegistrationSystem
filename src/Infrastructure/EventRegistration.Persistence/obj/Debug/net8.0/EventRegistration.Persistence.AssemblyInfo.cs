@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventRegistration.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50fd882575423ef32d65fe66c6b378c01fcbc281")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06e88aec7d149a77bdb33f709ce0d6ec8f051ab8")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventRegistration.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventRegistration.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

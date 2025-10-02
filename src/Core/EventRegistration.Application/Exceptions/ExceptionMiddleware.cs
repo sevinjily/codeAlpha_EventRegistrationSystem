@@ -38,7 +38,7 @@ namespace EventRegistration.Application.Exceptions
             List<string> errors = new()
             {
                 $"Xeta mesaji: {exception.Message}",
-               $"Xeta aciqlamasi: {exception.InnerException?.ToString()}" 
+               //$"Xeta aciqlamasi: {exception.InnerException?.ToString()}" 
             };
             return httpContext.Response.WriteAsync(new ExceptionModel
             {
