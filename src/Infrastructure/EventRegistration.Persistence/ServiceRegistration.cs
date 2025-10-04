@@ -1,5 +1,6 @@
 ﻿using EventRegistration.Application.Interfaces.Repositories;
 using EventRegistration.Application.Interfaces.UnitOfWorks;
+using EventRegistration.Domain.Entities;
 using EventRegistration.Persistence.Context;
 using EventRegistration.Persistence.Repositories;
 using EventRegistration.Persistence.UnitOfWorks;
@@ -20,6 +21,19 @@ namespace EventRegistration.Persistence
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddIdentityCore<User>(opt =>
+            {
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequiredLength = 2;
+                opt.Password.RequireLowercase = false;
+                opt.Password.RequireUppercase = false;
+                opt.Password.RequireDigit = false;
+                opt.SignIn.RequireConfirmedEmail = false;
+
+            })
+                .AddRoles<Role>()
+                .AddEntityFrameworkStores<AppDbContext>();
 
         }
     }

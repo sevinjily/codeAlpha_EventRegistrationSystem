@@ -1,5 +1,6 @@
 using EventRegistration.Persistence;
 using EventRegistration.Application;
+using EventRegistration.Infrastructure;
 using EventRegistration.Mapper;
 using EventRegistration.Application.Exceptions;
 
@@ -15,6 +16,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddPersistenceRegistration(builder.Configuration);//persistence layerinin serviceRegistrationu
 builder.Services.AddApplicationRegistration();
+builder.Services.AddInfrastructureRegistration(builder.Configuration);
 builder.Services.AddCustomMapperRegistration();
 
 var app = builder.Build();
