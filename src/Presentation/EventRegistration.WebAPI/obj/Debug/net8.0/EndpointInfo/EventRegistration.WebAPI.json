@@ -1,8 +1,9 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "EventRegistration.WebAPI",
-    "version": "1.0"
+    "title": "EventRegistration API",
+    "description": "EventRegistration API swagger client.",
+    "version": "v1"
   },
   "paths": {
     "/api/Event/GetAllEvents": {
@@ -321,6 +322,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "You can enter your JWT token below. \r\n\r\nType 'Bearer' followed by a space and then your token.\r\n\r\nExample: \"Bearer eyJhBslkKLIIDJDMSNsdsk\"",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
