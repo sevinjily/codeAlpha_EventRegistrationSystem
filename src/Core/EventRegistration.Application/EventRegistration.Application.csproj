@@ -20,4 +20,9 @@
     <ProjectReference Include="..\EventRegistration.Domain\EventRegistration.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Auth\Exceptions\" />
+    <Folder Include="Features\Auth\Rules\" />
+  </ItemGroup>
+
 </Project>

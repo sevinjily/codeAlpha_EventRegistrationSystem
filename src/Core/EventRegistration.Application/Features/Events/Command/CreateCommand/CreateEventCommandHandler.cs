@@ -1,20 +1,21 @@
-﻿using EventRegistration.Application.Features.Events.Rules;
+﻿using EventRegistration.Application.Bases;
+using EventRegistration.Application.Features.Events.Rules;
 using EventRegistration.Application.Interfaces.AutoMapper;
 using EventRegistration.Application.Interfaces.UnitOfWorks;
 using EventRegistration.Application.Wrappers.ServiceResponses;
 using EventRegistration.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 
 namespace EventRegistration.Application.Features.Events.Command.CreateCommand
 {
-    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommandRequest,Unit>
+    public class CreateEventCommandHandler : BaseHandler,IRequestHandler<CreateEventCommandRequest,Unit>
     {
-        private readonly IUnitOfWork unitOfWork;
         private readonly EventRules eventRules;
 
-        public CreateEventCommandHandler(IUnitOfWork unitOfWork,EventRules eventRules)
+        public CreateEventCommandHandler(EventRules eventRules, IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
         {
-            this.unitOfWork = unitOfWork;
+           
             this.eventRules = eventRules;
         }
 
