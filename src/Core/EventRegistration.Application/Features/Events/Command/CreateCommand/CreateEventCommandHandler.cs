@@ -17,7 +17,11 @@ namespace EventRegistration.Application.Features.Events.Command.CreateCommand
         {
            
             this.eventRules = eventRules;
+           
         }
+
+        public IMapper Mapper { get; }
+        public IHttpContextAccessor HttpContextAccessor { get; }
 
         public async Task<Unit> Handle(CreateEventCommandRequest request, CancellationToken cancellationToken)
         {

@@ -1,20 +1,20 @@
-﻿using EventRegistration.Application.Interfaces.AutoMapper;
+﻿using EventRegistration.Application.Bases;
+using EventRegistration.Application.Interfaces.AutoMapper;
 using EventRegistration.Application.Interfaces.UnitOfWorks;
 using EventRegistration.Application.Wrappers.ServiceResponses;
 using EventRegistration.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 
 namespace EventRegistration.Application.Features.Events.Command.UpdateCommand
 {
-    public class UpdateEventCommandHandler : IRequestHandler<UpdateEventCommandRequest, Unit>
+    public class UpdateEventCommandHandler : BaseHandler,IRequestHandler<UpdateEventCommandRequest, Unit>
     {
-        private readonly IUnitOfWork unitOfWork;
-        private readonly IMapper mapper;
+      
 
-        public UpdateEventCommandHandler(IUnitOfWork unitOfWork,IMapper mapper)
+        public UpdateEventCommandHandler(IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
         {
-            this.unitOfWork = unitOfWork;
-            this.mapper = mapper;
+           
         }
         public async Task<Unit> Handle(UpdateEventCommandRequest request, CancellationToken cancellationToken)
         {

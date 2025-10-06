@@ -1,17 +1,18 @@
-﻿using EventRegistration.Application.Interfaces.UnitOfWorks;
+﻿using EventRegistration.Application.Bases;
+using EventRegistration.Application.Interfaces.AutoMapper;
+using EventRegistration.Application.Interfaces.UnitOfWorks;
 using EventRegistration.Application.Wrappers.ServiceResponses;
 using EventRegistration.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 
 namespace EventRegistration.Application.Features.Events.Command.DeleteCommand
 {
-    public class DeleteEventCommandHandler : IRequestHandler<DeleteEventCommandRequest, Unit>
+    public class DeleteEventCommandHandler : BaseHandler,IRequestHandler<DeleteEventCommandRequest, Unit>
     {
-        private readonly IUnitOfWork unitOfWork;
 
-        public DeleteEventCommandHandler(IUnitOfWork unitOfWork)
+        public DeleteEventCommandHandler(IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
         {
-            this.unitOfWork = unitOfWork;
         }
         public async Task<Unit> Handle(DeleteEventCommandRequest request, CancellationToken cancellationToken)
         {

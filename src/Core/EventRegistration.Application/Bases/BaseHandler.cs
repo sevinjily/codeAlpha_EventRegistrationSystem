@@ -10,14 +10,14 @@ namespace EventRegistration.Application.Bases
         public readonly IMapper mapper;
         public readonly IUnitOfWork unitOfWork;
         public readonly IHttpContextAccessor httpContextAccessor;
-        public readonly Guid userId;
+        public readonly string userId;
 
         public BaseHandler(IMapper mapper,IUnitOfWork unitOfWork,IHttpContextAccessor httpContextAccessor)
         {
             this.mapper = mapper;
             this.unitOfWork = unitOfWork;
             this.httpContextAccessor = httpContextAccessor;
-            userId = Guid.Parse(httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
+            userId = httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
         }
     }
 }
