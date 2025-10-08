@@ -54,6 +54,54 @@
         }
       }
     },
+    "/api/Auth/Login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginCommandRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginCommandRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginCommandRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginCommandResponseServiceResponseWithData"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginCommandResponseServiceResponseWithData"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginCommandResponseServiceResponseWithData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Event/GetAllEvents": {
       "get": {
         "tags": [
@@ -65,17 +113,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ServiceResponse"
+                  "$ref": "#/components/schemas/GetAllEventsQueryResponseIListServiceResponseWithData"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ServiceResponse"
+                  "$ref": "#/components/schemas/GetAllEventsQueryResponseIListServiceResponseWithData"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ServiceResponse"
+                  "$ref": "#/components/schemas/GetAllEventsQueryResponseIListServiceResponseWithData"
                 }
               }
             }
@@ -251,6 +299,62 @@
         },
         "additionalProperties": false
       },
+      "GetAllEventsQueryResponse": {
+        "type": "object",
+        "properties": {
+          "eventName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "userLimit": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllEventsQueryResponseIListServiceResponseWithData": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllEventsQueryResponse"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
       "HttpStatusCode": {
         "enum": [
           100,
@@ -317,6 +421,61 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "LoginCommandRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "default": "akbar@gmail.com",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "default": "Akbar1234_",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginCommandResponse": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "accessTokenExpiration": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginCommandResponseServiceResponseWithData": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "value": {
+            "$ref": "#/components/schemas/LoginCommandResponse"
+          }
+        },
+        "additionalProperties": false
       },
       "RegisterCommandRequest": {
         "type": "object",

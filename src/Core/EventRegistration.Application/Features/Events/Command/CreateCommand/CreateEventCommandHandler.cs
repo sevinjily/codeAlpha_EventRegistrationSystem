@@ -32,8 +32,8 @@ namespace EventRegistration.Application.Features.Events.Command.CreateCommand
             Event eventt = new(request.EventName, request.Description, request.StartDate, request.EndDate, request.Location, request.UserLimit);
 
             await unitOfWork.GetWriteRepository<Event>().AddAsync(eventt);
-            await unitOfWork.SaveAsync();
-            //return new ServiceResponse(true,System.Net.HttpStatusCode.Created,"Ugurla yaradildi!");
+           
+            await unitOfWork.SaveAsync(); //return new ServiceResponse(true,System.Net.HttpStatusCode.Created,"Ugurla yaradildi!");
 
             return Unit.Value;
         }

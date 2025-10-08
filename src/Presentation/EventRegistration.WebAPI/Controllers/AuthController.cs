@@ -1,4 +1,5 @@
-﻿using EventRegistration.Application.Features.Auth.Command.Register;
+﻿using EventRegistration.Application.Features.Auth.Command.Login;
+using EventRegistration.Application.Features.Auth.Command.Register;
 using EventRegistration.Application.Wrappers.ServiceResponses;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -22,6 +23,14 @@ namespace EventRegistration.WebAPI.Controllers
            var result= await mediator.Send(request);
 
             return new ServiceResponse(true, System.Net.HttpStatusCode.Created, "User created!");
+
+        }
+        [HttpPost]
+        public async Task<ServiceResponseWithData<LoginCommandResponse>> Login(LoginCommandRequest request)
+        {
+            var result = await mediator.Send(request);
+
+            return new ServiceResponseWithData<LoginCommandResponse>(result,true, System.Net.HttpStatusCode.Created, "User login successfully!");
 
         }
     }

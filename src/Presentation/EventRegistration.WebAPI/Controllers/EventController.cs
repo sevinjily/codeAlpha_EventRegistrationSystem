@@ -4,8 +4,10 @@ using EventRegistration.Application.Features.Events.Command.UpdateCommand;
 using EventRegistration.Application.Features.Events.Query;
 using EventRegistration.Application.Wrappers.ServiceResponses;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace EventRegistration.WebAPI.Controllers
 {
@@ -20,17 +22,15 @@ namespace EventRegistration.WebAPI.Controllers
             this.mediator = mediator;
         }
         [HttpGet]
-        public async Task<ServiceResponse> GetAllEvents()
+        [Authorize]
+        public async Task<ServiceResponseWithData<IList<GetAllEventsQueryResponse>>> GetAllEvents()
         {
             var response=await mediator.Send(new GetAllEventsQueryRequest());
-            return new ServiceResponse();
+            return new ServiceResponseWithData<IList<GetAllEventsQueryResponse>>(response,true,HttpStatusCode.OK,"All events!");
 
-
-            //if (!response.isSuccess) return BadRequest(new { message = response.Message });
-
-            //return Ok(new { message = response.Message });
         }
         [HttpPost]
+        
         public async Task<ServiceResponse> CreateEvent(CreateEventCommandRequest command)
         {
             var result = await mediator.Send(command);
@@ -47,7 +47,7 @@ namespace EventRegistration.WebAPI.Controllers
             return new ServiceResponse();
         }   
         [HttpDelete]
-        public async Task<ServiceResponse> DeleteEvent([FromQuery]DeleteEventCommandRequest command)
+        public async Task<ServiceResponse> DeleteEvent([FromQuery]DeleteEventCommandRequest command) 
         {
            var result= await mediator.Send(command);
             return new ServiceResponse();

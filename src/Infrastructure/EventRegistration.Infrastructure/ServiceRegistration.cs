@@ -34,6 +34,7 @@ namespace EventRegistration.Infrastructure
                     ClockSkew = TimeSpan.Zero
                 };
             });
+
         }
     }
 }

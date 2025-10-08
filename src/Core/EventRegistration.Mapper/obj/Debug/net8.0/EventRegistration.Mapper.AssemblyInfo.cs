@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventRegistration.Mapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5379f64126eb67c36e7314288bcb2058a84bdc9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+489730f1448623509e68df86426b0cd96d5398fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventRegistration.Mapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventRegistration.Mapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

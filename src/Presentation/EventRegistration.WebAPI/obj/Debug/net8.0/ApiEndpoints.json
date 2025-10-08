@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "EventRegistration.WebAPI.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EventRegistration.Application.Features.Auth.Command.Login.LoginCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventRegistration.Application.Wrappers.ServiceResponses.ServiceResponseWithData\u00601[[EventRegistration.Application.Features.Auth.Command.Login.LoginCommandResponse, EventRegistration.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventRegistration.WebAPI.Controllers.AuthController",
     "Method": "Register",
     "RelativePath": "api/Auth/Register",
     "HttpMethod": "POST",
@@ -87,7 +113,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "EventRegistration.Application.Wrappers.ServiceResponses.ServiceResponse",
+        "Type": "EventRegistration.Application.Wrappers.ServiceResponses.ServiceResponseWithData\u00601[[System.Collections.Generic.IList\u00601[[EventRegistration.Application.Features.Events.Query.GetAllEventsQueryResponse, EventRegistration.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

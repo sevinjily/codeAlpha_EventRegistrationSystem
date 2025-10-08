@@ -1,7 +1,5 @@
 ﻿using EventRegistration.Application.Interfaces.AutoMapper;
-using EventRegistration.Mapper.AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 
 namespace EventRegistration.Mapper
 {
@@ -10,6 +8,7 @@ namespace EventRegistration.Mapper
         public static void AddCustomMapperRegistration(this IServiceCollection services)
         {
             services.AddSingleton<IMapper, AutoMapper.Mapper>();
+
         }
     }
 }

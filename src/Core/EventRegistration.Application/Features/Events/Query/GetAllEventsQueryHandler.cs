@@ -1,22 +1,28 @@
-﻿using EventRegistration.Application.Interfaces.UnitOfWorks;
+﻿using EventRegistration.Application.Features.Events.Rules;
+using EventRegistration.Application.Interfaces.UnitOfWorks;
 using EventRegistration.Application.Wrappers.ServiceResponses;
 using EventRegistration.Domain.Entities;
 using MediatR;
 
 namespace EventRegistration.Application.Features.Events.Query
 {
-    public class GetAllEventsQueryHandler : IRequestHandler<GetAllEventsQueryRequest, ServiceResponseWithData<IList<GetAllEventsQueryResponse>>>
+    public class GetAllEventsQueryHandler : IRequestHandler<GetAllEventsQueryRequest, IList<GetAllEventsQueryResponse>>
     {
         private readonly IUnitOfWork unitOfWork;
+        private readonly EventRules eventRules;
 
-        public GetAllEventsQueryHandler(IUnitOfWork unitOfWork)
+        public GetAllEventsQueryHandler(IUnitOfWork unitOfWork,EventRules eventRules)
         {
             this.unitOfWork = unitOfWork;
+            this.eventRules = eventRules;
         }
-        public async Task<ServiceResponseWithData<IList<GetAllEventsQueryResponse>>> Handle(GetAllEventsQueryRequest request, CancellationToken cancellationToken)
+        public async Task<IList<GetAllEventsQueryResponse>> Handle(GetAllEventsQueryRequest request, CancellationToken cancellationToken)
         {
             var events = await unitOfWork.GetReadRepository<Event>().GetAllAsync();
-            List <GetAllEventsQueryResponse> response= new();
+
+           await eventRules.EventDoesNotFound(events);
+
+            List<GetAllEventsQueryResponse> response= new();
 
 
             foreach (var eventt in events)
@@ -31,14 +37,8 @@ namespace EventRegistration.Application.Features.Events.Query
                     EndDate = eventt.EndDate
                 });
             }
-            throw new Exception("Xeta mesaji");
-            //return new ServiceResponseWithData<IList<GetAllEventsQueryResponse>>
-            //(
-            //   value: response,
-            //   isSuccess: true,
-            //   statusCode: System.Net.HttpStatusCode.OK
-            // );
-            
+            return response;
+           
             
             
         }
