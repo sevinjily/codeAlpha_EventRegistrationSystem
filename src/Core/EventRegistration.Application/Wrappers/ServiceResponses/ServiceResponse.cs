@@ -16,7 +16,7 @@ namespace EventRegistration.Application.Wrappers.ServiceResponses
         }
       
         //MESAJLI
-        public ServiceResponse(bool IsSuccess=true, HttpStatusCode statusCode = HttpStatusCode.OK, string message="ugurlu") : this(IsSuccess, statusCode)
+        public ServiceResponse(bool IsSuccess, HttpStatusCode statusCode, string message) : this(IsSuccess, statusCode)
         {
             {
 

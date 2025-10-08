@@ -1,4 +1,5 @@
 ﻿using EventRegistration.Application.Bases;
+using EventRegistration.Application.Features.Events.Command.UpdateCommand;
 using EventRegistration.Application.Features.Events.Rules;
 using EventRegistration.Application.Interfaces.AutoMapper;
 using EventRegistration.Application.Interfaces.UnitOfWorks;
@@ -25,15 +26,17 @@ namespace EventRegistration.Application.Features.Events.Command.CreateCommand
 
         public async Task<Unit> Handle(CreateEventCommandRequest request, CancellationToken cancellationToken)
         {
-            IList<Event> events = await unitOfWork.GetReadRepository<Event>().GetAllAsync();
+            //IList<Event> events = await unitOfWork.GetReadRepository<Event>().GetAllAsync();
 
-            await eventRules.EventTitleMustNotBeSame(events, request.EventName);
+            //await eventRules.EventTitleMustNotBeSame(events, request.EventName);
 
-            Event eventt = new(request.EventName, request.Description, request.StartDate, request.EndDate, request.Location, request.UserLimit);
+            //Event eventt = new(request.EventName, request.Description, request.StartDate, request.EndDate, request.Location, request.UserLimit);
+           
+            Event eventt = mapper.Map<Event, CreateEventCommandRequest>(request);
 
             await unitOfWork.GetWriteRepository<Event>().AddAsync(eventt);
            
-            await unitOfWork.SaveAsync(); //return new ServiceResponse(true,System.Net.HttpStatusCode.Created,"Ugurla yaradildi!");
+            await unitOfWork.SaveAsync(); 
 
             return Unit.Value;
         }

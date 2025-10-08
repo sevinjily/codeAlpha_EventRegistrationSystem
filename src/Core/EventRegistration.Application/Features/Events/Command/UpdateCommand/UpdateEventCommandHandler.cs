@@ -20,12 +20,13 @@ namespace EventRegistration.Application.Features.Events.Command.UpdateCommand
         {
             var eventt=await unitOfWork.GetReadRepository<Event>().GetAsync(x=>x.Id==request.Id && !x.IsDeleted);
 
+            if (eventt == null) throw new Exception("Tapilmadi!"); 
+
             var map=mapper.Map<Event,UpdateEventCommandRequest>(request);
 
             await unitOfWork.GetWriteRepository<Event>().UpdateAsync(map);
             await unitOfWork.SaveAsync();
             return Unit.Value;
-            //return new ServiceResponse(true, System.Net.HttpStatusCode.OK, "Updated successfully!");
 
         }
     }
