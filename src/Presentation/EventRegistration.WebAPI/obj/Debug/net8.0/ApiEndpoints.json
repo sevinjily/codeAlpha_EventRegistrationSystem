@@ -27,6 +27,32 @@
   },
   {
     "ContainingType": "EventRegistration.WebAPI.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/Auth/RefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EventRegistration.Application.Features.Auth.Command.RefreshToken.RefreshTokenCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventRegistration.Application.Wrappers.ServiceResponses.ServiceResponseWithData\u00601[[EventRegistration.Application.Features.Auth.Command.RefreshToken.RefreshTokenCommandResponse, EventRegistration.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventRegistration.WebAPI.Controllers.AuthController",
     "Method": "Register",
     "RelativePath": "api/Auth/Register",
     "HttpMethod": "POST",
@@ -39,6 +65,52 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": [
+      {
+        "Type": "EventRegistration.Application.Wrappers.ServiceResponses.ServiceResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventRegistration.WebAPI.Controllers.AuthController",
+    "Method": "Revoke",
+    "RelativePath": "api/Auth/Revoke",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EventRegistration.Application.Features.Auth.Command.Revoke.RevokeCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventRegistration.Application.Wrappers.ServiceResponses.ServiceResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventRegistration.WebAPI.Controllers.AuthController",
+    "Method": "RevokeAll",
+    "RelativePath": "api/Auth/RevokeAll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "EventRegistration.Application.Wrappers.ServiceResponses.ServiceResponse",
