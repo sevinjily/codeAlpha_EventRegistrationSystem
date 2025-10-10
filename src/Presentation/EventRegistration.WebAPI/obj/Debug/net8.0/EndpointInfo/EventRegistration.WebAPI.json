@@ -151,7 +151,7 @@
       }
     },
     "/api/Auth/Revoke": {
-      "post": {
+      "put": {
         "tags": [
           "Auth"
         ],
@@ -199,7 +199,7 @@
       }
     },
     "/api/Auth/RevokeAll": {
-      "post": {
+      "put": {
         "tags": [
           "Auth"
         ],
@@ -360,6 +360,45 @@
         "parameters": [
           {
             "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EventRegistration/RegisterForEvent": {
+      "post": {
+        "tags": [
+          "EventRegistration"
+        ],
+        "parameters": [
+          {
+            "name": "EventId",
             "in": "query",
             "schema": {
               "type": "string",

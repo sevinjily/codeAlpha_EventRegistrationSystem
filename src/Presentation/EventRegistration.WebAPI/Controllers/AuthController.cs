@@ -1,12 +1,10 @@
-﻿using Azure.Core;
-using EventRegistration.Application.Features.Auth.Command.Login;
+﻿using EventRegistration.Application.Features.Auth.Command.Login;
 using EventRegistration.Application.Features.Auth.Command.RefreshToken;
 using EventRegistration.Application.Features.Auth.Command.Register;
 using EventRegistration.Application.Features.Auth.Command.Revoke;
 using EventRegistration.Application.Features.Auth.Command.RevokeAll;
 using EventRegistration.Application.Wrappers.ServiceResponses;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventRegistration.WebAPI.Controllers
@@ -46,7 +44,7 @@ namespace EventRegistration.WebAPI.Controllers
             return new ServiceResponseWithData<RefreshTokenCommandResponse>(result, true, System.Net.HttpStatusCode.Created, "User login successfully!");
 
         }
-        [HttpPost]
+        [HttpPut]
         public async Task<ServiceResponse> Revoke(RevokeCommandRequest request)
         {
              await mediator.Send(request);
@@ -54,7 +52,7 @@ namespace EventRegistration.WebAPI.Controllers
             return new ServiceResponse(true, System.Net.HttpStatusCode.Created, "User logout!");
 
         }
-        [HttpPost]
+        [HttpPut]
         public async Task<ServiceResponse> RevokeAll()
         {
              await mediator.Send(new RevokeAllCommandRequest());

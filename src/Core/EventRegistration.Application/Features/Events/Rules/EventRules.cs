@@ -14,7 +14,7 @@ namespace EventRegistration.Application.Features.Events.Rules
 
         public Task EventDoesNotFound(IList<Event> eventt)
         {
-            if (eventt == null)
+            if (eventt == null) 
                 throw new EventDoesNotFoundException();
 
             return Task.CompletedTask;

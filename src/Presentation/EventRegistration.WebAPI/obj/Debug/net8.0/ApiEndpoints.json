@@ -81,7 +81,7 @@
     "ContainingType": "EventRegistration.WebAPI.Controllers.AuthController",
     "Method": "Revoke",
     "RelativePath": "api/Auth/Revoke",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -107,7 +107,7 @@
     "ContainingType": "EventRegistration.WebAPI.Controllers.AuthController",
     "Method": "RevokeAll",
     "RelativePath": "api/Auth/RevokeAll",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -207,6 +207,32 @@
         "Name": "command",
         "Type": "EventRegistration.Application.Features.Events.Command.UpdateCommand.UpdateEventCommandRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventRegistration.Application.Wrappers.ServiceResponses.ServiceResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventRegistration.WebAPI.Controllers.EventRegistrationController",
+    "Method": "RegisterForEvent",
+    "RelativePath": "api/EventRegistration/RegisterForEvent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EventId",
+        "Type": "System.Guid",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
